@@ -1,0 +1,76 @@
+body {
+  background:linear-gradient(#52181f, #52181f, black, black);
+}
+.navbar-color{
+  background: linear-gradient( red, black);
+}
+.color {
+    color: white;
+}
+.boutton-color {
+  background-color: red;
+  border: red;
+}
+.center {
+    text-align: center;
+}
+.center2 {
+  justify-content: center;
+  align-items: center;
+}
+.police {
+  height: 50px;
+  font-family: "Open Sans";
+   src: url("./Blaka.zip");
+ color: white;
+ justify-content: center;
+}
+.hero-header {
+  background-image: url(./assets/images/salle-cinema.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body {
+    color:black;
+    background-color: black ;
+    background-repeat:no-repeat;
+}
+.txt{
+    color: white;
+}
+.card{
+  color: black;
+}
+.footer{
+  background: linear-gradient( black, red);
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.link{
+  color: white;
+  text-decoration: none;
+}
+.G404 {
+  text-decoration : underline;
+  color: white;
+}
+.card2 {
+  max-width: 200px;
+  min-width: 20px;
+  color:white;
+  margin: 40px;
+}
+.container-card {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rs-color {
+  border: 0px;
+  background: transparent;
+}
