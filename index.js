@@ -1,16 +1,20 @@
-let api = document.querySelector(".container-card");
+let api = document.getElementById("container-card");
 
-async function getMovies() {
-  const url = "https://www.omdbapi.com/?s=star%20wars&plot=short&apikey=2a4831ba"
+
+async function getMovies(titre="Star Wars") {
+  console.log(titre)
+  const url = "https://www.omdbapi.com/?s=" + titre + "&plot=short&apikey=2a4831ba"
   const response = await fetch(url)
   const data = await response.json()
   return data.Search
 }
 
-const data = getMovies().then(function (movies) {
-  console.log(movies)
+api.innerHTML = "";
+function generateMoviesList(recherche){
+  getMovies(recherche).then(function (movies) {
+ 
   
-  movies.forEach(function (movie) {
+    movies.forEach(function (movie) {
     const card = document.createElement("div")
     card.classList.add("card2")
     
@@ -40,6 +44,14 @@ const data = getMovies().then(function (movies) {
     cardButton.innerHTML = '<button type="button" class="btn btn-outline-danger">Infos</button>'
     cardBody.appendChild(cardButton)
 
-api.appendChild(card)
+    api.appendChild(card)
+    })
+
 })
+}
+generateMoviesList()
+document.getElementById("submit1").addEventListener("click",function(){
+const recherche = document.getElementById("title1").value
+document.getElementById("container-card").innerHTML=""
+generateMoviesList(recherche)
 })
